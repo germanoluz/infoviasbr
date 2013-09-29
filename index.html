@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<!--
+	InfoviasBR - Dados abertos sobre trânsito em rodovias federais
+	Copyright 2013 Equipe InfoviasBR (II Concurso de Aplicativos Abertos do MJ/W3C)
+			| Germano Luz: germanoluz@hotmail.com
+			| Fábio Françoso: fabio.francoso@outlook.com
+			| Halaés Nobre: h.nobre@gmail.com
+			| Cássia Sousa: cassinhasousa@gmail.com
+
+	InfoviasBR é um software livre; você pode redistribui-lo e/ou modifica-lo dentro dos termos da Licença Pública Geral GNU como publicada pela Fundação do Software Livre (FSF); na versão AGPL v.3.
+    InfoviasBR é distribuido na esperança que possa ser  util, mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÇÂO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR.
+    Veja a Licença Pública Geral GNU para maiores detalhes.
+    Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este programa, se não, visite: http://www.infoviasbr.com.br/licenca
+	Para obter uma cópia integral do código-fonte visite: http://github.com/infoviasbr
+-->
+<html>
+	<head>
+		<title>InfoviasBR</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="descrição do site e dos objetivos da aplicação" />
+		<meta name="keywords" content="colocar as palavras chave para os motores de busca" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/Chart.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header" class="skel-panels-fixed">
+
+				<div class="top">
+
+					<!-- Logo 
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<h1 id="title">Jane Doe</h1>
+							<span class="byline">Hyperspace Engineer</span>
+						</div>-->
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-panels-ignoreHref"><span class="icon icon-info-sign">Sobre InfoviasBR</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link" class="skel-panels-ignoreHref"><span class="icon icon-bar-chart">Gráficos</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-panels-ignoreHref"><span class="icon icon-search">Busca Avançada</span></a></li>
+								<li><a href="#teste" id="teste-link" class="skel-panels-ignoreHref"><span class="icon icon-mobile-phone">Mobilidade</span></a></li>
+								<li><a href="#teste" id="teste-link" class="skel-panels-ignoreHref"><span class="icon icon-archive">Termos de uso</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-panels-ignoreHref"><span class="icon icon-envelope">Contate-nos</span></a></li>
+							</ul>
+						</nav>
+						
+				</div>
+				
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+							<li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+							<li><a href="#" class="icon icon-github"><span>Github</span></a></li>
+							<!--li><a href="#" class="icon icon-dribbble"><span>Dribbble</span></a></li-->
+							<!--li><a href="#" class="icon icon-envelope"><span>Email</span></a></li-->
+						</ul>
+				
+				</div>
+			
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+			
+				<!-- Sobre -->
+					<section id="top" class="one">
+						<div class="container">
+
+							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+
+							<header>
+								<h2 class="alt">
+									Bem vindo ao<strong> InfoviasBR </strong> seu site de dados<br>
+									abertos sobre trânsito em rodovias federais.<br />
+								</h2>
+							</header>
+							
+							<p>Trata-se de uma aplicação web que condensa, em gráficos interativos, informações oficiais das ocorrências em BRs, diretamente das bases de dados abertos da PRF e do MJ. Use InfoviasBR para planejar a rota de sua próxima viagem e divirta-se!</p> Saiba mais.
+
+							<footer>
+								<a href="#portfolio" class="button scrolly">Experimentar</a>
+							</footer>
+
+						</div>
+					</section>
+					
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>Informações</h2>
+							</header>
+							
+							<canvas id="myChart" width="100%" height="auto">
+
+
+							</canvas>
+						
+							<div class="row">
+								<div class="4u">
+									<!--article class="item">
+										<a href="http://ineedchemicalx.deviantart.com/art/A-million-suns-384369739" class="image full"><img src="images/pic02.jpg" alt="" /></a>
+										<header>
+											<h3>Ipsum Feugiat</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="http://ineedchemicalx.deviantart.com/art/Mind-is-a-clear-stage-375431607" class="image full"><img src="images/pic03.jpg" alt="" /></a>
+										<header>
+											<h3>Rhoncus Semper</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a href="http://ineedchemicalx.deviantart.com/art/You-really-got-me-345249340" class="image full"><img src="images/pic04.jpg" alt="" /></a>
+										<header>
+											<h3>Magna Nullam</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="http://ineedchemicalx.deviantart.com/art/Ad-infinitum-354203162" class="image full"><img src="images/pic05.jpg" alt="" /></a>
+										<header>
+											<h3>Natoque Vitae</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a href="http://ineedchemicalx.deviantart.com/art/Elysium-355393900" class="image full"><img src="images/pic06.jpg" alt="" /></a>
+										<header>
+											<h3>Dolor Penatibus</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="http://ineedchemicalx.deviantart.com/art/Emperor-of-the-Stars-370265193" class="image full"><img src="images/pic07.jpg" alt="" /></a>
+										<header>
+											<h3>Orci Convallis</h3>
+										</header>
+									</article-->
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Pesquisa Avançada</h2>
+							</header>
+
+							<a href="http://ineedchemicalx.deviantart.com/art/Pasadena-357650036" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+							
+							<p>
+
+							</p>
+
+
+						</div>
+					</section>
+			
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contate-nos</h2>
+							</header>
+
+							<p>
+
+							</p>
+
+							<form method="post" action="#">
+								<div class="row half">
+									<div class="6u"><input type="text" class="text" name="name" placeholder="Nome" /></div>
+									<div class="6u"><input type="text" class="text" name="email" placeholder="Email" /></div>
+								</div>
+								<div class="row half">
+									<div class="12u">
+										<textarea name="message" placeholder="Mensagem"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<a href="#" class="button submit">Enviar</a>
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+					<!-- TEste de div para novos gráficos -->
+					<section id="teste" class="five">
+						<div class="container">
+
+							<header>
+								<h2>Licença</h2>
+							</header>
+
+							<!--a href="http://ineedchemicalx.deviantart.com/art/Pasadena-357650036" class="image featured"><img src="images/pic08.jpg" alt="" /></a-->
+							
+							<p>
+
+							</p>
+
+						</div>
+					</section>
+			
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<div class="copyright">
+						<p>Aplicação desenvolvida pela Equipe Infovias BR</p>
+						<p>II Concurso de aplicativos Abertos do MJ/W3C</p>
+						<ul class="menu">
+							<li>Garfe-nos no <a href="#">Github</a></li>
+							<li>Licença: <a href="#">Creative Commons</a></li>
+							<li>Dados por: <a href="#">dadosabertos.gov.br</a></li>
+						</ul>
+					</div>
+				
+			</div>
+
+	</body>
+</html>
