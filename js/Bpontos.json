@@ -1,0 +1,62 @@
+[
+	{	
+		"Id": 1,
+		"Latitude":	-99.639110,	
+		"Longitude": -36.543769	,	
+		"Descricao": "<b>Posto: </b>	DEL.02/PST.02 - Posto São Sebastião	<br><b>Endereço: </b> 	BR-101, Km 206"
+	},
+	{
+		"Id": 2,	
+		"Latitude":	-98.811110,	
+		"Longitude": -63.040556,	
+		"Descricao": "<b>Posto: </b>	DEL.01/PST.04 - Ariquemes	<br><b>Endereço: </b> 	BR-364, Km 520"
+	},
+	{
+		"Id": 3,
+		"Latitude":	-96.736080,
+		"Longitude": -35.717775,	
+		"Descricao": "<b>Posto: </b>	13ª SUPERINTENDÊNCIA REGIONAL DE POLÍCIA RODOVIÁRIA FEDERAL	<br><b>Endereço: </b> 	R. Comendador Almeida Guimarães,22 Pajuçara"
+	},
+	{
+		"Id": 4,
+		"Latitude":	-95.658580,	
+		"Longitude": -35.777275,	
+		"Descricao": "<b>Posto: </b>	DEL.01 - Maceió	<br><b>Endereço: </b> 	BR-104, Km 097,6 - Tabuleiro do Martin"
+	},
+	{
+		"Id": 5,	
+		"Latitude":	-95.212355602107472,	
+		"Longitude": -35.20234468749999,	
+		"Descricao": "<b>Posto: </b>	DEL.01/PST.01 - Maceió	<br><b>Endereço: </b> 	BR-104, Km 097,6 - Tabuleiro do Martins"
+	},
+	{	
+		"Id": 6,	
+		"Latitude":	-95.534190,	
+		"Longitude": -35.977642,	
+		"Descricao": "<b>Posto: </b>	DEL.02/PST.01 - Posto de Atalaia	<br><b>Endereço: </b> 	BR-316, Km 247"
+	},
+	{	
+		"Id": 7,	
+		"Latitude":	-94.504280,	
+		"Longitude": -38.202075,	
+		"Descricao": "<b>Posto: </b>	DEL.07 - Paulo Afonso	<br><b>Endereço: </b> 	BR 110, KM 002"
+	},
+	{	
+		"Id": 8,	
+		"Latitude":	-94.504280,	
+		"Longitude": -38.202075,	
+		"Descricao": "<b>Posto: </b>	DEL.07/PST.01 - Paulo Afonso	<br><b>Endereço: </b> 	BR-110, Km 002"
+	},
+	{	
+		"Id": 9,	
+		"Latitude":	-94.294940,	
+		"Longitude": -36.643167,	
+		"Descricao": "<b>Posto: </b>	DEL.03 - Palmeira dos Índios	<br><b>Endereço: </b> 	BR-316, Km 152,2"
+	},
+	{	
+		"Id": 10,	
+		"Latitude":	-94.294610,	
+		"Longitude": -36.643233,	
+		"Descricao": "<b>Posto: </b>	DEL.03/PST.01 - Posto de Palmeira dos Índios	<br><b>Endereço: </b> 	BR-316, Km 152,2"
+	}
+]

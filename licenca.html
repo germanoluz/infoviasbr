@@ -2,76 +2,298 @@
 <!--
 	InfoviasBR - Dados abertos sobre trânsito em rodovias federais
 	Copyright 2013 Equipe InfoviasBR (II Concurso de Aplicativos Abertos do MJ/W3C)
-			| Germano Luz: germanoluz@hotmail.com
-			| Fábio Françoso: fabio.francoso@outlook.com
-			| Halaés Nobre: h.nobre@gmail.com
-			| Cássia Sousa: cassinhasousa@gmail.com
-
+		| Germano Luz: germanoluz@hotmail.com
+		| Fábio Françoso: fabio.francoso@outlook.com
+		| Halaés Nobre: hs.nobre@gmail.com
+		| Cássia Sousa: cassinhasousa@hotmail.com
 	InfoviasBR é um software livre; você pode redistribui-lo e/ou modifica-lo dentro dos termos da Licença Pública Geral GNU como publicada pela Fundação do Software Livre (FSF); na versão AGPL v.3.
     InfoviasBR é distribuido na esperança que possa ser  util, mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÇÂO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR.
     Veja a Licença Pública Geral GNU para maiores detalhes.
     Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este programa, se não, visite: http://www.infoviasbr.com.br/licenca
-	Para obter uma cópia integral do código-fonte visite: http://github.com/infoviasbr
+	Para obter uma cópia integral do código-fonte visite: http://github.com/germanoluz/infoviasbr
 -->
 <html>
 	<head>
-		<title>InfoviasBR</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="descrição do site e dos objetivos da aplicação" />
-		<meta name="keywords" content="colocar as palavras chave para os motores de busca" />
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-		</noscript>
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<title>InfoviasBR - Termos da Licença GNU AGPL V3</title>
+		<style>
+			body {font-family: Trebuchet MS; line-height: 160%; width: 100%; height: auto; margin: 0;}
+			h1 {font-size: 2.1em; color: #666; margin: 20px; text-align:justify; }
+			h2 {font-size: 1.8em; color: #ccc; margin: 20px; text-align:justify;}
+			h3 {font-size: 1.2em; color: #666; margin: 20px; text-align:justify;}
+			p {font-size: 0.8em; margin: 20px; text-align:justify;}
+		</style>
+    <meta charset="utf-8">
 	</head>
 	<body>
-			<section id="top" class="one">
-				<div class="container">
-					<header>
-						<h2 class="alt">
-							LICENÇA PÚBLICA GERAL GNU<br>
-							<h3>TERMOS E CONDIÇÕES PARA CÓPIA, DISTRIBUIÇÃO E MODIFICAÇÃO</h3><br>
-						</h2>
-					</header>
+	<div id="geral">
+		<header>
+			<h1>LICENÇA PÚBLICA GERAL GNU</h1>
+				<h2>TERMOS E CONDIÇÕES PARA CÓPIA, DISTRIBUIÇÃO E MODIFICAÇÃO.</h2>
+		</header>
+		<hr>
+		<div class="textolicenca">
+<h3>0. Definições.</h3>
+			<p>Um "programa licenciado" significa qualquer programa ou outra obra distribuída com esta Licença. O "Programa" refere-se a qualquer programa ou obra, e
+ uma "obra baseada no Programa" significa ou o Programa, ou qualquer obra derivada, conforme leis de direitos autorais: ou seja, uma obra contendo o Programa
+ ou um trecho dele, tenha sido ou não modificado. Ao longo desta Licença, o termo "modificação" inclui, sem limitação, a tradução e a extensão.<br>
+ Uma "obra coberta" significa ou o Programa ou qualquer obra baseada no Programa. Cada licenciado é referido como "você".<br>
+ "Propagar" uma obra significa fazer qualquer coisa com ela que demande permissão sob as leis autorais aplicáveis, que não seja executá-lo num computador ou 
+ fazer modificações privadas. Isso inclui copiar, distribuir (com ou sem modificações), sublicenciar, e em alguns países também algumas outras possibilidades.</p>
 
-					<div class="textolicenca">
-						<h3>0. Definições.</h3>
-							<p>Um "programa licenciado" significa qualquer programa ou outra obra distribuída com esta Licença. O "Programa" refere-se a qualquer programa ou obra, e uma "obra baseada no Programa" significa ou o Programa, ou qualquer obra derivada, conforme leis de direitos autorais: ou seja, uma obra contendo o Programa ou um trecho dele, tenha sido ou não modificado. Ao longo desta Licença, o termo "modificação" inclui, sem limitação, a tradução e a extensão. Uma "obra coberta" significa ou o Programa ou qualquer obra baseada no Programa. Cada licenciado é referido como "você".
-							<br>
-							"Propagar" uma obra significa fazer qualquer coisa com ela que demande permissão sob as leis autorais aplicáveis, que não seja executá-lo num computador ou fazer modificações privadas. Isso inclui copiar, distribuir (com ou sem modificações), sublicenciar, e em alguns países também algumas outras possibilidades.</p> 
-						
-						<h3>1. Código fonte.</h3>
-							<p>O "código fonte" de uma obra significa a forma preferencial da obra para que nela sejam feitas modificações.<br>
-							"Código objeto" significa qualquer versão da obra que não esteja em código fonte.<br>
-							O "Código Fonte Correspondente Completo" para uma obra em forma de código objeto significa todo o código fonte necessário para entender, adaptar, modificar, compilar, referenciar, instalar e executar a obra, excluído o código fonte das ferramentas de propósito geral utilizadas para realizar essas atividades, mas que não sejam parte integrante da obra. Por exemplo, isso inclui quaisquer "scripts" utilizados para controlar estas atividades, e qualquer biblioteca compartilhada ou subprogramas dinamicamente vinculados que o programa tenha sido desenvolvido para requerer, como, por exemplo, por conta de íntima comunicação de dados ou controle de fluxos entre esses subprogramas e outras partes da obra, e arquivos de definição de interface associados aos arquivos do código fonte do programa.<br>
-							"Código Fonte Correspondente Completo" também inclui quaisquer códigos de criptografia ou autorizações necessárias para instalar e/ou executar o código fonte da obra, eventualmente modificado por você, no contexto recomendado ou principal de uso, de modo que o seu funcionamento em todas as circunstâncias seja idêntico ao da obra, exceto conforme alterado por suas modificações. Ele também inclui quaisquer códigos de descriptografia necessários para acessar ou destravar o "output" da obra. Entretanto, um código não precisará ser incluído se as circunstâncias normais indicarem que o usuário já os possui.<br>
-							"Código Fonte Correspondente Completo" não precisa incluir nada que os usuários possam gerar automaticamente a partir de outras partes do "Código Fonte Correspondente Completo".<br>
-							Como uma exceção especial, o "Código Fonte Correspondente Completo" não precisa incluir uma sub-unidade particular se (a) uma sub-unidade idêntica for normalmente incluída como um adjunto da distribuição ou de um componente essencial (kernel, gerenciador de janelas e assim por diante) do sistema operacional em que o executável rode, ou de um compilador usado para produzir o executável ou de um interpretador de código objeto utilizado na sua execução, e (b) se a sub-unidade (deixadas de lado possíveis extensões incidentais) servir apenas para permitir o uso da obra com aquele componente ou compilador ou interpretador, ou para implementar uma interface padrão amplamente utilizada, implementação esta que não requeira licenças de patentes que já não estejam disponíveis em caráter geral para o software sob esta Licença.</p>
-									
-						<h3>Cássia vai continuar</h3>
+<h3>1. Código fonte.</h3>
+<p>O "código fonte" de uma obra significa a forma preferencial da obra para que nela sejam feitas modificações.<br>
+"Código objeto" significa qualquer versão da obra que não esteja em código fonte.<br>
+O "Código Fonte Correspondente Completo" para uma obra em forma de código objeto significa todo o código fonte necessário para entender, adaptar, 
+modificar, compilar, referenciar, instalar e executar a obra, excluído o código fonte das ferramentas de propósito geral utilizadas para realizar essas 
+atividades, mas que não sejam parte integrante da obra. Por exemplo, isso inclui quaisquer "scripts" utilizados para controlar estas atividades, e qualquer 
+biblioteca compartilhada ou subprogramas dinamicamente vinculados que o programa tenha sido desenvolvido para requerer, como, por exemplo, por conta de 
+íntima comunicação de dados ou controle de fluxos entre esses subprogramas e outras partes da obra, e arquivos de definição de interface associados aos 
+arquivos do código fonte do programa.<br>
+"Código Fonte Correspondente Completo" também inclui quaisquer códigos de criptografia ou autorizações necessárias para instalar e/ou executar o código
+fonte da obra, eventualmente modificado por você, no contexto recomendado ou principal de uso, de modo que o seu funcionamento em todas as circunstâncias
+seja idêntico ao da obra, exceto conforme alterado por suas modificações. Ele também inclui quaisquer códigos de descriptografia necessários para acessar 
+ou destravar o "output" da obra. Entretanto, um código não precisará ser incluído se as circunstâncias normais indicarem que o usuário já os possui.<br>
+"Código Fonte Correspondente Completo" não precisa incluir nada que os usuários possam gerar automaticamente a partir de outras partes do "Código Fonte 
+Correspondente Completo".<br>
+Como uma exceção especial, o "Código Fonte Correspondente Completo" não precisa incluir uma sub-unidade particular se (a) uma sub-unidade idêntica for
+normalmente incluída como um adjunto da distribuição ou de um componente essencial (kernel, gerenciador de janelas e assim por diante) do sistema operacional
+em que o executável rode, ou de um compilador usado para produzir o executável ou de um interpretador de código objeto utilizado na sua execução, e (b) se a
+sub-unidade (deixadas de lado possíveis extensões incidentais) servir apenas para permitir o uso da obra com aquele componente ou compilador ou interpretador,
+ou para implementar uma interface padrão amplamente utilizada, implementação esta que não requeira licenças de patentes que já não estejam disponíveis em
+caráter geral para o software sob esta Licença.</p>
 
-							<p>asdfasd asdf asdf asdf as df asd f asd f as df asdfasdfasdfas dfasdf asdfa sdfasdfa sdf asdfas dfa sdfasd fa sdfasd fa sdfasdfasdf as dfasdfasdf asdasdfasdfa sdfasdfsdfas dfasd fa sdf as df s df asd f asd f asdfasdfasdf asfa!</p>
+<h3>2. Permissões básicas.</h3>
 
-							</div>
+<p>Todos os direitos concedidos sob esta Licença são concedidos pelo período de duração de direitos autorais sobre o Programa, e são irrevogáveis, desde que
+ as condições estabelecidas sejam cumpridas. A Licença afirma expressamente a sua permissão ilimitada para executar o Programa. O "output" desta execução
+ é coberto por esta Licença apenas se, dado seu conteúdo, constitua uma obra baseada no Programa.<br>
+ Esta Licença reconhece seus direitos de "fair use" ou outros equivalentes, conforme previstos pelas leis de direitos autorais.</p>
+ 
+<p>Esta Licença dá permissão ilimitada para modificar e executar privadamente o Programa, desde que você não interponha ação por violação de patente contra
+ qualquer um por desenvolver, usar ou distribuir suas próprias obras baseadas no Programa.<br>
+Propagação das obras cobertas é permitida sem limitação, desde que ela não permita que outros que não você façam ou recebam cópias. <br>
+A propagação que permita a eles tomar essas medidas é permitida como "distribuição", sob as condições das cláusulas 4-6 abaixo.<br>
+A Propagação das obras cobertas por esta licença é permitida sem limitação, desde que ela não permita que outros que não você façam ou recebam cópias.<br>
+A propagação que permite tais medidas é considerada como sendo "distribuição", sob as condições das cláusulas 4-6 abaixo.</p>
+ 
+<h3>3. Mecanismos de Restrição Digital (Digital Restrictions Management).</h3>
 
-							<!-- ver se incluo jquery para essa página abrir e aí o botão seria fechar -->	
-							<footer>
-								<a href="#portfolio" class="button scrolly">Fechar</a>
-							</footer>
-							<br>
-							<br>
+<p>Como uma licença de software livre, esta Licença intrinsecamente desfavorece tentativas técnicas de restringir a liberdade dos usuários de copiar,
+ modificar e compartilhar obras protegidas por direitos autorais.<br>
+ Cada uma dessas provisões deve ser interpretada à luz desta declaração específica de intenção do licenciante. Independentemente de qualquer outra provisão
+ desta Licença, nenhuma permissão é dada para distribuir obras licenciadas que ilegalmente invadam a privacidade dos usuários, nem para modos de distribuição
+ que impeçam os usuários que executam as obras licenciadas de exercer plenamente seus direitos legais garantidos por esta Licença.<br>
+Nenhuma obra coberta constitui parte de uma medida efetiva de proteção tecnológica: isto é, a distribuição de uma obra coberta como parte de um sistema,
+para gerar ou acessar certa informação, constitui permissão geral ao menos para o desenvolvimento, distribuição e uso, sob esta Licença, de outro software
+capaz de acessar a mesma informação.</p>
 
-						</div>
-					</section>
-					
-	</body>
+<h3>4. Cópias fiéis (verbatim).</h3>
+
+<p>Você pode copiar e distribuir cópias fiéis do código fonte do Programa da forma que você o recebeu, por qualquer meio, deste que você conspícua e 
+apropriadamente publique em cada cópia um aviso de direitos autorais adequado; matenha intactos todos os avisos de licença e de ausência de quaisquer garantias;
+forneça a todos os destinatários do Programa uma cópia desta Licença, junto com o Programa; e obedeça quaisquer termos adicionais presentes em partes desse
+Programa, conforme a cláusula 7. Você pode cobrar pelo ato físico de transferir uma cópia, e pode opcionalmente oferecer garantia em troca de um pagamento.</p>
+
+<h3>5. Distribuição de versões modificadas do código.</h3>
+
+<p>Tendo modificado uma cópia do Programa sob as condições da cláusula 2, assim formando uma obra baseada no Programa, você pode copiar e distribuir tal obra
+ ou modificações na forma de código fonte sob os termos da cláusula 4 acima, desde que você também atenda às seguintes condições:<br>
+
+a) A obra modificada tem que conter avisos em destaque declarando que você modificou a obra, e a data de qualquer modificação.<br>
+
+b) Você deve licenciar a obra modificada completa como um todo, sob esta Licença, para qualquer um que venha a possuir uma cópia. Esta Licença será aplicada
+ integralmente, exceto conforme permitido na cláusula 7 abaixo, para a totalidade da obra.<br>
+ Esta Licença não permite o licenciamento da obra sob qualquer outra forma, mas ela não invalida permissão nesse sentido se você a recebeu separadamente.<br>
+
+c) Se a obra modificada tem interfaces de usuário interativas, cada uma deverá incluir um mecanismo conveniente para a exibição do aviso de direitos autorais
+ apropriado, e avisar aos usuários que não há garantia para o programa (ou que você fornece uma garantia), que os usuários podem redistribuir a obra modificada
+ sob estas condições, e como fazer para visualizar uma cópia desta Licença junto com a lista central (se houver) de outros termos conformes à cláusula 7.<br>
+ Se a interface apresenta uma lista de comandos ou opções para o usuário, como um menu, um comando para visualizar esta informação deve constar em destaque
+ nessa lista. Caso isso não ocorra, a obra modificada deverá mostrar a informação na inicialização - exceto se o Programa tiver modos interativos e não mostrar
+ informações na inicialização.</p>
+
+<p>Esses requerimentos aplicam-se à obra modificada como um todo. Se seções identificáveis dessa obra, adicionadas por você, não são derivadas do Programa,
+e podem razoavelmente ser consideradas obras independentes e separadas, então esta Licença e seus termos não se aplicam a tais seções quando você as distribuir
+como obras separadas para uso não em combinação com o Programa. Mas quando você distribuir as mesmas seções para uso em combinação com obras cobertas,
+ não importa de que forma tal combinação ocorra, a totalidade da combinação deve ser licenciada sob esta Licença, cujas permissões para outros licenciados
+ estendem-se à totalidade distribuída, e conseqüentemente para cada parte do todo. As suas seções podem conter outros termos como parte desta combinação
+ em formas limitadas, conforme descrito na cláusula 7.<br>
+Assim, esta cláusula não tem a intenção de reclamar direitos ou de contestar os seus direitos sobre uma obra inteiramente criada por você; ao invés disso;
+ a intenção é exercitar o direito de controlar a distribuição de obras derivadas ou coletivas baseadas no Programa.<br>
+A compilação de uma obra coberta com outras obras separadas e independentes, que não sejam por sua natureza extensões da obra coberta, em ou sobre um volume
+ de um meio de armazenamento ou distribuição, é chamada "agregado" se os direitos autorais resultantes da compilação não forem utilizados para limitar os
+ direitos legais dos usuários da compilação para além do que as obras individuais permitem.<br>
+ A mera inclusão de uma obra coberta em um agregado não faz esta Licença se aplicar às outras partes do agregado.</p>
+
+<h3>6. Distribuição em formato Não-Fonte.</h3>
+
+<p>Você pode copiar e distribuir uma obra coberta em forma de Código Objeto sob os termos das cláusulas 4 e 5, desde que você também distribua em forma legível
+ por máquinas o Código Fonte Correspondente Completo (doravante "Fontes Correspondentes"), sob os termos desta Licença, em uma das seguintes formas:<br>
+
+a) Distribuição do Código Objeto em um produto físico (incluindo um meio físico de distribuição), acompanhado pelos Fontes Correspondentes distribuídos em 
+um meio físico durável costumeiramente utilizado para o intercâmbio de software; ou,<br>
+
+b) Distribuição do Código Objeto em um produto físico (incluindo um meio físico de distribuição), acompanhado por uma oferta escrita, válida por pelo menos 
+três anos e enquanto você ofereça partes esparsas ou suporte ao consumidor para aquele modelo do produto, para entregar a qualquer terceiro, por um preço 
+não superior a dez vezes o custo de distribuição física do código, uma cópia dos Fontes Correspondentes para todo o software no produto que for coberto por
+esta Licença, em um meio físico durável costumeiramente utilizado para o intercâmbio de software; ou,<br>
+
+c) Distribuição privada do Código Objeto com uma cópia da oferta escrita para fornecer os Fontes Correspondentes. Esta alternativa somente é permitida para
+distribuições ocasionais e não-comerciais, e apenas se você recebeu o Código Objeto com tal oferta, de acordo com a forma "b" acima. Ou,<br>
+
+d) Distribuição do Código Objeto pela oferta de acesso para o copiar, a partir de um local designado, e oferta de equivalente acesso para copiar os Fontes 
+Correspondentes da mesma forma e pelo mesmo lugar. Você não precisa requerer que os destinatários copiem os Fontes Correspondentes junto com o Código Objeto.<br>
+
+Distribuição dos Fontes Correspondentes de acordo com esta seção deve ocorrer em formato publicamente documentado, não obstruído por patentes, e não pode 
+requerer senhas especiais ou chaves para descompactação, leitura ou cópia.<br>
+
+Os Fontes Correspondentes podem incluir trechos que não declarem formalmente estarem licenciados sob esta Licença, mas que estejam qualificados, nos termos da
+cláusula 7, para inclusão como obra sob esta Licença.</p>
+
+<h3>7. Compatibilidade de licenças.</h3>
+
+<p>Quando você coloca à disposição do público uma obra baseada no Programa, você pode incluir seus próprios termos cobrindo partes adicionais para as quais 
+você tenha, ou possa dispor, as apropriadas permissões de direito autoral, desde que tais termos claramente permitam todas as atividades permitidas por esta
+Licença, ou permitam o uso ou o relicenciamento sob esta Licença.<br>
+Os seus termos podem ser escritos separadamente ou esta Licença pode ser somada à permissão adicional por escrito.<br>
+Se você assim licenciar as suas partes adicionadas, tais partes podem ser usadas separadamente sob os seus termos, mas a obra integral permanecerá regida por 
+esta Licença.<br>
+Aqueles que copiarem a obra, ou obras baseadas nela, devem preservar os seus termos assim como eles devem preservar esta Licença, contanto que esteja presente
+qualquer trecho substancial das partes para as quais seus termos se aplicam.</p>
+
+<p>Além das permissões adicionais, certos tipos limitados de exigências adicionais podem ser acrescentados às suas partes adicionais, como segue:<br>
+
+a) Eles podem requerer a preservação de certos avisos de direitos autorais, outros avisos legais e/ou créditos de autoria, e podem requerer que a origem 
+das partes por eles coberta não seja falsamente apresentada, e/ou que as versões alteradas deles sejam marcadas no código fonte, ou marcadas de formas 
+específicas razoáveis, como sendo diferentes da versão original.<br>
+
+b) Eles podem trazer uma declaração de isenção de garantias e responsabilidade em termos diferentes daqueles utilizados por esta Licença.<br>
+
+c) Eles podem proibir ou limitar o uso para fins de publicidade de nomes de contribuidores especificados, e eles podem requerer que algumas marcas especificadas
+sejam utilizadas para fins de publicidade apenas da forma que constitua uso legítimo sob a legislação de marcas, exceto com permissão expressa.<br>
+
+d) Eles podem requerer que a obra contenha facilidades funcionais que permitam aos usuários imediatamente obter cópias do seu Código Fonte Correspondente 
+Completo.<br>
+
+e) Eles podem impor retaliações para patentes de software, o que significa que a permissão para uso de partes que você adicionou são rescindidas ou podem ser
+rescindidas, total ou parcialmente, sob as condições declaradas, para usuários relacionados a qualquer parte que tenha interposto uma ação judicial de patente
+de software (i.e., uma ação judicial alegando que algum software viola uma patente). As condições devem limitar a retaliação para um subconjunto de dois casos:<br>
+ 1. Ações judiciais que não tenham como fundamento a retaliação contra outras ações judiciais de patentes que não tenham tal fundamento.<br>
+ 2. Ações judiciais que versem sobre parte desta obra, ou outro código que foi colocado à disposição do público junto com partes que você adicionou, estando a
+ totalidade sob os presentes termos para estas partes.</p>
+
+<p>Nenhuma outra condição adicional é permitida nos seus termos; nenhuma outra condição, portanto, pode estar presente em qualquer obra que use esta Licença.<br>
+ Esta Licença não intenciona tornar válidos seus termos, ou assegura que eles sejam válidos ou que você os possa tornar válidos;<br>
+ ela simplesmente não proíbe que você os empregue.</p>
+
+<p>Quando outros modificarem a obra, se eles modificarem suas partes dela, eles podem colocar à disposição do público tais partes da versão deles sob esta 
+Licença sem permissões adicionais, incluindo aviso para tal efeito, ou removendo o aviso que concede permissões específicas adicionais a esta Licença.<br>
+Então qualquer permissão mais ampla concedida pelos seus termos que não por esta Licença, não se aplicará às modificações deles, ou às versões modificadas
+das suas partes que resultem de modificações deles. Entretanto, as exigências específicas dos seus termos ainda se aplicarão ao que for derivado das suas 
+partes adicionais.<br>
+A menos que a obra permita também distribuição sobre uma versão prévia desta Licença, todos os outros termos incluídos na obra sob esta seção devem ser 
+listados, em conjunto, em uma lista central na obra.</p>
+
+<h3>8. Rescisão.</h3>
+
+<p>Você não pode propagar, modificar ou sublicenciar o Programa, exceto de acordo com as condições expressas desta Licença. Qualquer tentativa contrária a ela
+de propagar, modificar ou sublicenciar o Programa é nula, e qualquer titular de direitos autorais poderá rescindir seus direitos sob esta Licença a qualquer
+tempo, depois de ter notificado você da violação por quaisquer meios razoáveis, em 60 dias de qualquer ocorrência. No entanto, terceiros que tenham recebido de
+você cópias ou direitos sob esta Licença não terão suas licenças rescindidas, contanto que permaneçam cumprindo-a integralmente.</p>
+
+<h3>9. Não contrato.</h3>
+
+<p>Você não é obrigado a aceitar esta Licença para receber uma cópia do Programa. Contudo, não lhe é garantida permissão para propagar ou modificar o Programa
+ou quaisquer obras abrangidas por esta Licença. Se você não aceitar esta Licença, tais ações irão violar direitos autorais. Portanto, ao modificar ou propagar
+o Programa (ou qualquer obra coberta), você declara que está aceitando os termos e condições desta Licença para assim proceder.</p>
+
+<h3>10. Licenciamento automático de usuários de "downstream".</h3>
+
+<p>Cada vez que você redistribuir uma obra coberta, o destinatário automaticamente deverá receber a licença dos licenciantes originais, para propagar e
+modificar a obra sujeita a esta Licença, incluindo quaisquer termos adicionais introduzidos conforme a cláusula 7.<br>
+Você não pode impor restrições adicionais ao exercício, pelos destinatários, dos direitos adquiridos ou afirmados, exceto (quando modificar a obra) nas formas
+limitadas permitidas pela seção 7.<br>
+Você não é responsável por garantir o cumprimento desta Licença por terceiros.</p>
+
+<h3>11. Licenciamento de patentes.</h3>
+
+<p>Quando você distribui uma obra coberta, você concede uma licença de patente ao destinatário, e a qualquer um que receber qualquer versão da obra, assegurando,
+para qualquer uma e todas as versões da obra coberta, todas as atividades permitidas ou contempladas por esta Licença, como instalar, executar e distribuir
+versões da obra, e usar seu "output".<br>
+A licença de patente é não-exclusiva, isenta do pagamento de royalties e de abrangência mundial, e cobre todas as patentes e pedidos de patentes de que você for
+titular ou tiver os direitos para sublicenciar, no momento da distribuição da obra coberta ou no futuro, que possam ser infringidas ou violadas pela obra 
+coberta ou por qualquer uso razoavelmente contemplado da obra coberta.<br>
+Se você distribuir uma obra coberta contando conscientemente com uma licença de patente, você deve agir para proteger usuários de "downstream" contra possíveis
+medidas contra violação de patentes contra as quais a licença protege.</p>
+
+<h3>12. Liberdade ou morte para o Programa.</h3>
+
+<p>Se condições forem impostas a você (por ordem judicial, acordos ou outras formas), contradizendo as condições desta Licença, elas não o eximem das condições
+aqui previstas. Se você não puder distribuir o Programa, ou outra obra coberta, de modo que sejam simultaneamente satisfeitas suas obrigações sob esta Licença
+e quaisquer outras obrigações pertinentes, então como conseqüência você não poderá distribuir o Programa de nenhuma forma.<br>
+Por exemplo, se uma licença de patente não permitir a redistribuição livre de royalties, para todos aqueles que receberam cópias direta ou indiretamente de
+você, então a única forma de você satisfação de ambas as licenças seria abstendo-se completamente da distribuição.<br>
+Não é o propósito desta cláusula induzi-lo a violar patentes ou outros direitos de exclusividade, ou contestar sua validade legal. O único propósito desta
+cláusula é proteger a integridade do sistema de distribuição de software livre. Muitas pessoas fizeram generosas contribuições à ampla gama de softwares 
+distribuídos, amparadas na aplicação consistente deste sistema; fica a critério do autor/doador decidir se ele ou ela está disposto a distribuir software por 
+qualquer outro sistema, e um licenciado não pode impor esta escolha.</p>
+
+<h3>13. Limitações Geográficas.</h3>
+
+<p>Se a distribuição e/ou uso do Programa forem restritos em alguns países, seja por conta de patentes ou por interfaces protegidas por direitos autorais, 
+o detentor original dos direitos autorais que coloque o Programa sob esta Licença pode adicionar uma limitação geográfica explícita à distribuição, excluindo
+ esses países, para que a distribuição seja permitida apenas neste ou entre aqueles países assim não excluídos.<br>
+ Neste caso, esta Licença incorpora a limitação como se estivesse escrita no corpo desta Licença.</p>
+
+<h3>14. Versões revisadas desta Licença.</h3>
+
+<p>A Free Software Foundation pode publicar versões revisadas e/ou novas versões da Licença Pública Geral GNU de tempos em tempos.<br>
+Estas novas versões serão similares em espírito à presente versão, mas podem diferir em detalhes que reflitam novos problemas ou preocupações.<br>
+Cada versão recebe um número de versão distinto. Se o Programa especifica que um determinado número de versão desta Licença "ou qualquer versão posterior"
+se aplica a ele, você tem a opção de seguir os termos e condições daquela versão numerada ou de qualquer versão posterior publicada pela Free Software 
+Foundation. Se o programa não especificar um número de versão desta Licença, você pode escolher qualquer versão já publicada pela Free Software Foundation.</p>
+
+<h3>15. Pedidos de exceção.</h3>
+
+<p>Se você deseja incorporar partes do Programa em outros programas livres cujas condições de distribuição sejam diferentes, escreva ao autor para pedir
+autorização. Para o software cujos direitos autorais sejam de titularidade da Free Software Foundation, escreva para nós; às vezes abrimos exceções para isso.<br>
+Nossa decisão será guiada por dois objetivos: preservar a condição de liberdade de todas as derivações do nosso software livre, e de promover de modo geral o
+compartilhamento e reutilização de software.</p>
+
+<h3>EXCLUSÃO DE GARANTIA</h3>
+
+<p>Não há garantias para o Programa, na extensão permitida pela lei aplicável. Exceto quando previsto por escrito e de forma diversa, os detentores de 
+direitos autorais e/ou outras partes fornecem o software "como está", sem quaisquer garantias, expressas ou implícitas, incluindo, mas não se limitado a
+garantias implícitas de comercialização e as de adequação a qualquer propósito particular. O risco total relativo à qualidade e ao desempenho do Programa 
+é seu. Se o programa se mostrar defeituoso, você assume os custos de todas as manutenções, reparos e correções necessários.</p>
+
+<p>Em nenhum caso, a menos que exigido pela lei aplicável ou acordado por escrito, quaisquer detentores de direitos autorais, ou qualquer outra parte que
+possa modificar e/ou redistribuir o Programa como permitido acima, serão responsáveis perante você por danos, incluindo qualquer dano geral, especial, 
+acidental ou conseqüentes resultantes do uso ou inabilidade para usar o Programa (incluindo, mas não se limitando a perda de informação ou informação ser 
+tornada imprecisa, ou perdas sofridas por você ou por terceiros, ou falhas do Programa paro operar com quaisquer outros programas), mesmo que tais detentores
+ou outra parte tenham sido avisados da possibilidade de tais danos.</p>
+
+<p>A menos que expressamente declarado, este Programa não foi testado para uso em sistemas críticos de segurança.</p>
+
+<h3>FIM DOS TERMOS E CONDIÇÕES</h3>
+
+<hr>
+
+<h1>InfoviasBR - Dados abertos sobre trânsito em rodovias federais</h1>
+	<h2>Copyright 2013 Equipe InfoviasBR (II Concurso de Aplicativos Abertos do MJ/W3C)</h2>
+		<h3>| Germano Luz: germanoluz@hotmail.com</h3>
+		<h3>| Fábio Françoso: fabio.francoso@outlook.com</h3>
+		<h3>| Halaés Nobre: hs.nobre@gmail.com</h3>
+		<h3>| Cássia Sousa: cassinhasousa@hotmail.com</h3>
+	<p>InfoviasBR é um software livre; você pode redistribui-lo e/ou modifica-lo dentro dos termos da Licença Pública Geral GNU como publicada pela Fundação 
+	do Software Livre (FSF); na versão AGPL v.3.<br>
+    InfoviasBR é distribuido na esperança que possa ser  util, mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÇÂO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR.
+    Veja a Licença Pública Geral GNU para maiores detalhes. <br>
+    Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este programa, se não, visite: http://www.infoviasbr.com.br/licenca<br>
+	Para obter uma cópia integral do código-fonte visite: http://github.com/germanoluz/infoviasbr<br><br>
+	</div>
+	<footer>
+		<a href="#" class="button scrolly">Fechar</a>
+	</footer>
+</body>
 </html>
