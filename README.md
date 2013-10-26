@@ -6,7 +6,7 @@ Copyright 2013 Equipe InfoviasBR (II Concurso de Aplicativos Abertos do MJ/W3C)
 	Desenvolvedores:
       | Germano Luz: germanoluz@hotmail.com
       | Fábio Françoso: fabio.francoso@outlook.com
-      | Halaés Nobre: h.nobre@gmail.com
+      | Halaés Nobre: nobre.hs@gmail.com
       | Cássia Sousa: cassinhasousa@gmail.com
 ================================================================
 
