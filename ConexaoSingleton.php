@@ -4,16 +4,16 @@ class ConexaoSingleton {
 // Nas linhas abaixo você poderá colocar as informações do Banco de Dados.
 	
 	//host  do servidor
-    private $host = "localhost";
+    private $host = "***";
 	
 	//usuario do servidor
-    private $user = "infovias_sa";
+    private $user = "***";
 	
 	//senha do servidor
-    private $senha = "@@infovias@@";
+    private $senha = "***";
 	
 	//nome do banco de dados	
-    private $dbase = "infovias_bd";
+    private $dbase = "***";
 	
 	//variaveis utilizada no script
     private $link;
