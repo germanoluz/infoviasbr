@@ -6,7 +6,7 @@ Copyright 2013 Equipe InfoviasBR (II Concurso de Aplicativos Abertos do MJ/W3C)
 	Desenvolvedores:
       | Germano Luz: germanoluz@hotmail.com
       | Fábio Françoso: fabio.francoso@outlook.com
-      | Halaés Nobre: h.nobre@gmail.com
+      | Halaés Nobre: nobre.hs@gmail.com
       | Cássia Sousa: cassinhasousa@gmail.com
 ================================================================
 
@@ -23,7 +23,7 @@ Licença
 Créditos
 
 	Gráficos
-		ChartJS (chartjs.com)
+		Highcharts (highcharts.com)
 
 	Icones e fontes
 		Font Awesome (http://fortawesome.github.com/Font-Awesome/)
@@ -33,6 +33,7 @@ Créditos
 		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
 		skelJS (skelJS.org)
 		CSS3 Pie (css3pie.com)
+		GoogleApi Maps
 
 
 ====================================================================
