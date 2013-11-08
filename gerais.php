@@ -15,7 +15,7 @@
 <html lang="pt-br">
     <head>
     <meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="maps/css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<style>
 		body {background-color:#ccc; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
 		div.graf {backgound-color: #fff; border-radius: 5px; margin:20px auto; width: 90%; -moz-box-shadow: 4px 4px 4px #888;
@@ -37,8 +37,7 @@
         <!-- DIVS DOS MAPAS: MAPA DE DELEGACIAS DA PRF NO BRASIL -->
         <h3>Delegacias da PRF no Brasil</h3>
 		<div id="mapa" class="graf"></div>
-		<!-- DIVS DOS MAPAS: MAPA 2 -->
-				
+		
 	<!-- Jquery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- Maps API Javascript -->

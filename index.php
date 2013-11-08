@@ -12,7 +12,7 @@
     Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este programa, se não, visite: http://www.infoviasbr.com.br/licenca
 	Para obter uma cópia integral do código-fonte visite: http://github.com/germanoluz/infoviasbr
 -->
-<html>
+<html lang="pt-br">
 	<head>
 		<title>InfoviasBR</title>
 		<meta charset="utf-8">
@@ -23,6 +23,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href="js/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
 		<link rel="shortcut icon" href="favicon.ico" />
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
@@ -41,54 +42,37 @@
 		<script src="http://code.highcharts.com/highcharts.js"></script>
 		<script src="http://code.highcharts.com/modules/exporting.js"></script>
 		<script src="js/auto_ajax.js"></script>
-		<!-- Add mousewheel plugin (this is optional) -->
-		<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-		<!-- Add fancyBox -->
-		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$(".various").fancybox({
-					maxWidth	: 1024,
-					maxHeight	: 768,
-					fitToView	: false,
-					width		: '90%',
-					height		: '90%',
-					autoSize	: false,
-					closeClick	: false,
-					openEffect	: 'none',
-					closeEffect	: 'none'
-				});
-			});
-		</script>
-        <!-- Script para acompanhamento do Google Analytics -->
-        <script>
-  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  			ga('create', 'UA-45177448-1', 'infoviasbr.com.br');
-  			ga('send', 'pageview');
-		</script>
-        	
+		<script src="js/jqvmap/jquery.vmap.js"></script>
+		<script src="js/jqvmap/maps/jquery.vmap.world.js"></script>
+		<script src="js/jqvmap/data/jquery.vmap.sampledata.js"></script>
+		<script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+		<link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 		<script>
-			$(function(){
-				jQuery("#enviabr").submit(function(){
-					jQuery.ajax({
-						beforeSend: function(){
-							$('#loading').css({display:"block"});
+		$(document).ready(function() {
+			$('form').live('submit', function(e){ // catch the form's submit event
+				e.preventDefault();
+				$.ajax({ // create an AJAX call...
+					data: $(this).serialize(), // get the form data
+					type: $(this).attr('method'), // GET or POST
+					url: $(this).attr('action'), // the file to call
+					async: true,
+					dataType: "html",
+					beforeSend: function(){
+						$('#loading').css({display:"block"});
 						},
-						complete: function(msg){
-							$('#loading').css({display:"none"});
-							$('html, body').animate({
-							scrollTop: $("#contentbr").offset().top
-							}, 1000);
-						}
-					});
+					success: function(response) { // on success..
+					$('#contentbr').html(response); // update the DIV
+					$('#loading').css({display:"none"});
+						$('html, body').animate({
+						scrollTop: $("#contentbr").offset().top
+						}, 800);
+					},
 					
 				});
 			});
+			return false; // cancel original event to prevent form submitting
+		});
 		</script>
 		<script>
             // Valida se é só numeros            
@@ -107,7 +91,80 @@
             	}
             }
 		</script>
-      
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".various").fancybox({
+					maxWidth	: 1024,
+					maxHeight	: 768,
+					fitToView	: false,
+					width		: '90%',
+					height		: '90%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+			jQuery('#vmap').vectorMap(
+			{
+				map: 'world_en',
+				backgroundColor: '#dadada',
+				borderColor: '#818181',
+				borderOpacity: 0.25,
+				borderWidth: 1,
+				color: '#f4f3f0',
+				enableZoom: true,
+				hoverColor: '#c9dfaf',
+				hoverOpacity: null,
+				normalizeFunction: 'linear',
+				scaleColors: ['#b6d6ff', '#005ace'],
+				selectedColor: '#c9dfaf',
+				selectedRegion: null,
+				showTooltip: true,
+				onRegionClick: function(element, code, region)
+				{
+					var message = 'You clicked "'
+						+ region 
+						+ '" which has the code: '
+						+ code.toUpperCase();
+						 
+					alert(message);
+				}
+			});
+		});
+		</script>
+		<script type="text/javascript"> 
+			jQuery.fn.toggleText = function(a,b) {
+			return   this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
+			}
+			$(document).ready(function(){
+				$('.tgl').before('<a class="btrevelar">Revelar conteúdo</a>');
+				$('.tgl').css('display', 'none')
+				$('a', '#box-toggle').click(function() {
+					$(this).next().slideToggle('slow')
+					.siblings('.tgl:visible').slideToggle('fast');
+				
+					$(this).toggleText('Revelar','Esconder')
+					.siblings('a').next('.tgl:visible').prev()
+					.toggleText('Revelar','Esconder')
+				});
+			})
+		</script>
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-45496252-1']);
+		  _gaq.push(['_setDomainName', 'infoviasbr.com.br']);
+		  _gaq.push(['_setAllowLinker', true]);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
       </head>
 	<body>
 		<!-- Menus -->
@@ -140,26 +197,35 @@
 		</div>
 	<!-- Main -->
 		<div id="main">
-			
             <!-- Sobre -->
 			<section id="sobre" class="three">
 				<div class="container">
 					<header>
 						<h2>Sobre o InfoviasBR</h2>
 					</header>
-						<img src="images/pic08.png" alt="Sobre InfoviasBR" class="image featured"/></a>
-						<p>Aplicação web que condensa dados oficiais sobre as ocorrências em rodovias federais (BRs), entre 2007 e 2013,
-						obtidas na base de dados da Polícia Rodoviária Federal e Ministério da Justiça, disponibilizados como consequencia da política 
-						de <a href="http://dados.gov.br/">dados abertos</a> do governo federal, que torna públicas informações interessantes à população. 
-						InfoviasBR é fruto do <a href="http://www.w3c.br/Home/ConcursoAplicativos">II Concurso de Aplicativos 
-						abertos MJ/W3C</a>, promovido pelas instituições mencionadas, com o apoio técnico do W3C, consórcio que desenvolve os padrões da 
-						internet. Muitas são as possibilidades, mas nos concentramos em 3 nichos:</p>
-							<ul class="defaults">
-								<li><span>Dados da BR: estatísticas sobre uma BR específica</span></li>
-								<li><span>Mapas: as 10 BRs mais perigosas, localização das delegacias da PRF no país</span></li>
-								<li><span>Gráficos gerais: gráficos interativos sobre o panorama geral do trânsito em BR</span></li>
+						<img src="images/pic08.png" alt="Sobre InfoviasBR" class="image featured"/>
+						<p>InfoviasBR é uma aplicação web que condensa dados oficiais sobre as ocorrências em rodovias federais (BRs), entre 2007 e 2013,
+						obtidas na base de dados da Polícia Rodoviária Federal e Ministério da Justiça!</p> 
+                        <div id="box-toggle">
+							<div class="tgl">
+								<p>Esses dados foram disponibilizados como consequencia da política de <a href="http://dados.gov.br/">dados abertos</a> do governo federal, que torna públicas informações interessantes à população. InfoviasBR é fruto do <a href="http://www.w3c.br/Home/ConcursoAplicativos">II Concurso de Aplicativos abertos MJ/W3C</a>, promovido pelas instituições mencionadas, com o apoio técnico do W3C, consórcio que desenvolve os padrões da internet. <br>
+                                Muitas são as possibilidades, mas nos concentramos em 3 nichos:</p>
+									<ul class="defaults">
+										<li><span>Dados da BR: estatísticas sobre uma BR específica</span></li>
+										<li><span>Mapas: as 10 BRs mais perigosas, localização das delegacias da PRF no país</span></li>
+										<li><span>Gráficos gerais: gráficos interativos sobre o panorama geral do trânsito em BR</span></li>
+									</ul>
+                                <p>Utilize InfoviasBR como auxílio na escolha da rodovia por onde irá trafegar em sua próxima viagem e divirta-se!</p>
+                            </div>
+                        </div>
+							<ul class="plataformas">
+								<li><span>Esperamos que aproveitem, seja no </span></li>
+								<li><img src="images/sm_ar.png" alt="Smartphone" title="Smartphone" /><span> ,</span></li>
+   								<li><img src="images/dt_ar.png" alt="Desktop" title="Desktop" /></li>
+                                <li><span>ou</span></li>
+   								<li><img src="images/tb_ar.png" alt="Tablet" title="Tablet"/><span> !</span></li>
+                                <li><span>Boa viagem :)</span></li>
 							</ul>
-						<p>Esperamos que aproveitem, seja no desktop, smartphone ou tablet!</p>
 				</div>
 			</section>
             
@@ -170,9 +236,9 @@
 						<h2>Busca de BR</h2>
 					</header>
 					<footer>
-						<form id="enviabr" method="post" data-remote="auto-ajax" data-update="#contentbr" action="br.php" >
-							<div class="row">
-								<div class="8u"><input type="text" class="text" name="br_escolhida" placeholder="Digite o número da BR" onkeypress="return numeros(event.keyCode, event.which);" maxlength="3"/></div>
+						<form id="envia" action="br.php" method="get" data-remote="auto-ajax" data-update="#resultado">
+							<div class="row flush">
+								<div class="-2u 4u"><input type="text" class="text" name="br_escolhida" placeholder="Digite o número da BR" onkeypress="return numeros(event.keyCode, event.which);" maxlength="3"/></div>
 								<div class="4u"><input type="submit" id="btn" class="button submit" value="Pesquisar"></div>
 							</div>
 						</form>
@@ -182,11 +248,22 @@
             
 			<!-- Tela de resultados da BR - irá aparecer aqui via ajax -->
 			<section id="contentbr" class="two">
-				<div id="loading" style="display: none;">Carregando resultados  <img src="images/ajax-loader.gif" alt=""></div>
+				<div id="loading" style="display: none;">
+					<p>Carregando resultados</p>
+					<img src="images/ajax-loader.gif" alt="" style="margin:0 auto;">
+				</div>
 			</section>
             
+			<!--section id="mundo" class="five">
+				<div class="container">
+					<header>
+						<h2>Trânsito no mundo</h2>
+					</header>
+				</div>
+				<div id="vmap" style="width: 90%; margin:0 auto; height: 400px; border-radius:5px; background: #ccc; padding:0;"></div>
+			</section-->			
             <!-- Contato -->
-					<section id="contact" class="four">
+					<!--section id="contact" class="four">
 						<div class="container">
 
 							<header>
@@ -211,7 +288,7 @@
 							</form>
 
 						</div>
-					</section>
+					</section-->
 			
 		</div>
 		<!-- Footer -->

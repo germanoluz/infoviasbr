@@ -179,15 +179,15 @@ class Consulta{
 
 		$mysql = ConexaoSingleton::getInstancia();
 
-        	$result = $mysql->sql_query("SELECT o.ocodiasemana AS diasemana, COUNT(o.ocodiasemana) AS QTD FROM localbr l,
-			ocorrencia o WHERE l.lbrbr = $br AND o.ocolocal = l.lbrid GROUP BY o.ocodiasemana ORDER BY QTD desc");
+        	$result = $mysql->sql_query("select diasemana, qtd from tmp_diasemana where lbrbr = $br group 
+			by diasemana order by qtd desc");
     
         if($result){ 
             $qtdAcdDia = array(); 
             $acdDia = array(); 
 
             if($row = mysql_fetch_assoc($result)){ 
-                $qtdAcdDia[] = $row["QTD"]; 
+                $qtdAcdDia[] = $row["qtd"]; 
                 $acdDia[] = $row["diasemana"];
             } 
               
@@ -208,15 +208,13 @@ class Consulta{
 
 		$mysql = ConexaoSingleton::getInstancia();
 
-        	$result = $mysql->sql_query("SELECT COUNT( p.pesid ) AS QTD FROM localbr l, ocorrencia o, pessoa p,
-			ocorrenciapessoa op, veiculo v WHERE v.veitvvcodigo IN ( 2, 3, 4, 5, 6 ) AND p.pescapacete =  'N' AND p.pesveiid =
-			v.veiid AND l.lbrbr = $br AND op.opepesid = p.pesid AND o.ocoid = op.opeocoid AND l.lbrid = o.ocolocal");
+        	$result = $mysql->sql_query("select qtd from tmp_ocosemcapa where lbrbr = $br");
     
         if($result){ 
             $qtdCapacete = array(); 
 
             if($row = mysql_fetch_assoc($result)){ 
-                $qtdCapacete[] = $row["QTD"]; 
+                $qtdCapacete[] = $row["qtd"]; 
             }
 			
 			$qtdCapacete_string = join($qtdCapacete); 
@@ -342,9 +340,7 @@ class Consulta{
 
 		$mysql = ConexaoSingleton::getInstancia();
 
-        	$result = $mysql->sql_query("SELECT l.lbrkm AS Trecho, COUNT( o.ocoid ) AS QTD FROM
-			localbr l, ocorrencia o WHERE l.lbrbr = $br AND l.lbrid = o.ocolocal GROUP BY l.lbrkm
-			ORDER BY qtd DESC LIMIT 0 , 2");
+        	$result = $mysql->sql_query("select Trecho, QTD from tmp_techomais where lbrbr = $br order by qtd desc limit 1");
     
         if($result){ 
             $qtdTrecho = array(); 
@@ -372,15 +368,14 @@ class Consulta{
 
 		$mysql = ConexaoSingleton::getInstancia();
 
-        	$result = $mysql->sql_query("SELECT o.ocohora AS Hora, COUNT( o.ocohora ) AS QTD FROM localbr l, ocorrencia o
-		WHERE l.lbrbr = $br AND o.ocolocal = l.lbrid GROUP BY o.ocohora ORDER BY QTD desc");
+        	$result = $mysql->sql_query("select Hora, qtd from tmp_horamais where lbrbr = $br order by qtd desc");
 			    
         if($result){ 
             $qtdHora = array(); 
             $hora = array(); 
 
             if($row = mysql_fetch_assoc($result)){ 
-                $qtdHora[] = $row["QTD"]; 
+                $qtdHora[] = $row["qtd"]; 
                 $hora[] = $row["Hora"];
             }
 		
@@ -453,15 +448,13 @@ class Consulta{
 
 		$mysql = ConexaoSingleton::getInstancia();
 
-        	$result = $mysql->sql_query("SELECT p.pescinto, count(p.pesid) as QTD from localbr l, ocorrencia o, pessoa p, 
-			ocorrenciapessoa op where l.lbrbr = $br and p.pesteccodigo = 2 and p.pescinto = 'N' and op.opepesid = p.pesid
-			and o.ocoid = op.opeocoid and o.ocoano in (2007, 2008, 2009, 2010, 2011, 2012, 2013) and l.lbrid = o.ocolocal");
+        	$result = $mysql->sql_query("Select qtd from tmp_semcinto where lbrbr = $br");
     
         if($result){ 
             $qtdSemCinto = array(); 
 
             while($row = mysql_fetch_assoc($result)){ 
-                $qtdSemCinto[] = $row["QTD"]; 
+                $qtdSemCinto[] = $row["qtd"]; 
             } 
               
         	$qtdSemCinto_string = join(", ", $qtdSemCinto); 
