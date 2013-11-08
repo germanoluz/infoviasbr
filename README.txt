@@ -34,6 +34,9 @@ Créditos
 		skelJS (skelJS.org)
 		CSS3 Pie (css3pie.com)
 		GoogleApi Maps
+		
+Agradecimentos
+		Fametro.
 
 
 ====================================================================
